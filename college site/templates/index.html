@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom styles */
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .navbar {
+            background-color: #343a40;
+        }
+
+        .navbar-brand,
+        .navbar-nav .nav-link {
+            color: #fff;
+        }
+
+        .hero-section {
+            background-image: url('hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .hero-section h1 {
+            font-size: 48px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            margin-bottom: 20px;
+        }
+
+        .hero-section p {
+            font-size: 20px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+            margin-bottom: 30px;
+        }
+
+        .feature-box {
+            text-align: center;
+            padding: 50px 0;
+            background-color: #fff;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-box i {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #343a40;
+        }
+
+        .feature-box h3 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #343a40;
+        }
+
+        .feature-box p {
+            font-size: 16px;
+            color: #6c757d;
+        }
+        .pccoe-sm-bar a {
+    margin-bottom: 10px;
+  }
+  .pccoe-sm-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: fixed;
+  top: 50%;
+  right: 0;
+  z-index: 99;
+  transform: translateY(-50%);
+  padding: 5px;
+  background: none;
+}
+.news-section {
+  background-color: #d0d5da;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.news-list {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.news-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.news-list li {
+  margin-bottom: 10px;
+}
+
+.news-list li a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.news-list li a:hover {
+  color: #0056b3;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.news-list li {
+  animation: fadeIn 0.5s ease-in-out;
+}
+#more {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        
+        #myBtn {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+        
+        #myBtn:hover {
+            background-color: #0056b3;
+        }
+        
+        #myBtn.expand {
+            background-color: #dc3545;
+        }
+        
+        #myBtn.expand:hover {
+            background-color: #a71d2a;
+        }
+        
+        @media (max-width: 768px) {
+            #myBtn {
+                width: 100%;
+                display: block;
+                margin-top: 8px;
+            }
+        }
+        footer {
+  background-color: #f8f8f8;
+  padding: 30px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 5px;
+}
+
+.map-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9 aspect ratio for responsive video */
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(241,255,4);
+    background: linear-gradient(90deg, rgba(241,255,4,1) 0%, rgba(236,170,62,1) 38%, rgba(255,29,0,1) 100%);;">
+      <img class="navbar-logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgEddJZTNDNreO2iLbye8yaWGnEZnKDidbRwA2vWH7OM0ScdHttm3Hi3xZrgORaj1Yt5xdQUh1cnqJCarPsLbTcqhxoy_5s5C1QwXweGT0JIWReYGMEdsbpCVFrdLPv-_DjlE6XSgdfHfD-0vw9HGWEXa20797GUy70VedpySwHymaqXUWx7HDDOEE_/s2146/logo.png" alt="hyperpulse" width="35" height="35" class="d-inline-block align-text-top mr-2" /> 
+    
+        <a class="navbar-brand" href="#" style="
+        font-family: 'Tangerine', serif;
+        font-size: 20px;
+        text-shadow: 4px 4px 4px #aaa;
+        
+        
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;">Siddhant-COE</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid">
+      <div id="demo" class="carousel slide" data-ride="carousel">
+       <!-- Carousel -->
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  
+
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgLUmNzzy-lpl_4OddAwEEVetmlopUII5-L_mey3j3HT88BJWsCycnNCbfURaVdO-O7i6Ne4MI_tF-bjel5ok8yaFE9I7U4QfijimR6TKj6yb-Dk2o3mzCdiNSlmKZuRfZyvB3d6ZysADyp1hhMURmh63coSLIej-9vBwb3kl3WGYKsuTMxxkpWT4sp/s4160/scoe.jpg" alt="Los Angeles" class="d-block w-100">
+      <div class="carousel-caption">
+        <section class="hero-section">
+          <div class="container">
+            <h1>Welcome to Siddhant College of Engineering</h1>
+            <p>Unlock your potential with quality education</p>
+            
+          </div>
+        </section>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhCYwf6odqLQGrar6Iuvq8B3uyoGiIgESlXVzJKIck3fCidyTnuGmur2MKu8hpqxQeyfsfK1xz_XpFR3cGyz8Od_S_3aPinlLOyHW4Qv1-7KIdt-haewxPCM-ysG6jc8P53f8c6ceDAWDcezqu1rB9RaxVyKJs7bRvzZmgyJRQ76uaAVTkEAoBgH669/s3036/scoe2.jpg" alt="New York" class="d-block w-100">
+      <div class="carousel-caption">
+        <section class="hero-section">
+          <div class="container">
+            <h1></h1>
+            <p></p>
+            
+          </div>
+        </section>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg8wVC1jp9h1E_OZ4wSaZfykpdtSSLN4o3tzt30NGsNLKXCKHbEUiVxl-ydF10iN-a5pNosQuKU5WY39ytjGDVZlqUpfBPPWyXHG9qM4sNM7uQ9bynamr1Gp6jauc2W85Te0b7sLSoIXWUNBYVCkoDuuIEEKZKhKXsEs40ec8uQmegf0q96MSGi9OgN/s3264/scoe1.jpg" alt="New York" class="d-block w-100">
+      <div class="carousel-caption">
+        <section class="hero-section">
+          <div class="container">
+            <h1></h1>
+            <p></p>
+            
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+
+   
+<br>
+<br>
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="feature-box"style="border-radius:10px;">
+                        <i class="fas fa-book"></i>
+                        <h3>Quality Education</h3>
+                        <p>We provide high-quality education to help students excel in their chosen fields.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="feature-box" style="border-radius:10px;">
+                        <i class="fas fa-users"></i>
+                        <h3>Experienced Faculty</h3>
+                        <p>Our experienced faculty members are dedicated to providing excellent guidance to students.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="feature-box" style="border-radius:10px;">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Success Stories</h3>
+                        <p>Our alumni have achieved great success in their careers, and you can be the next success story.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<br>
+<br>
+    <div class="container">
+      <div class="video-container" style="position: relative;
+      width: 100%;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio (change this value if needed) */
+      height: 0;">
+        <!-- YouTube Video Embed -->
+        <iframe style="position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; border-radius: 10px;" src="https://www.youtube.com/embed/WSBUhqkFZ48" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>></iframe>
+      </div>
+      </div>
+      <div class="pccoe-sm-bar">
+        <a href="https://www.facebook.com/SiddhantInstitutes/" target="_blank" class="facebook">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiey4riCKtu7T9A3f5dcpN5gkeSXsYtSvS_QrRMVGrCI4vSGquIRN_Wm_3VsQP8Jqg1xpKkrheirwSxxU7iap2fy0YH7I-hG4WErWyOgA8D9r90ggC1qPsH-UZ-fNvM6akcWvOsfzMOaiJO3tUIUUqUGosZzFUdGzY4ictd-Ny_vAoH-z_rRdaHVMpn/s1024/pccoe_facebook_social_icon.webp" style="border-radius:10px;" class="img-responsive iconspin" width="30" height="30">
+        </a>
+        
+        <a href="https://twitter.com/siddhantcoe" target="_blank" class="twitter">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEguxJLwYFhIBihecS47B6vb12DD_AF-tuNlc0F8DWr6JYet2mZYG4E6vHg4ne7bKRNcxzjHqveCinysVmR37_1iaG9j0q1lkYtlx0Q2Cj-wSIfGpW5z9RWjYs1cIZOmkmzj-H65qBIVWeDwBb3Yl3QnJ_BfWIL8nSknI_BPbVarGU_rh5Qh04vTXTN4/s1024/pccoe_twitter_social_icon.webp" style="border-radius:10px;" class="img-responsive iconspin" width="30" height="30">
+        </a>
+       
+        <a href="https://youtube.com/@siddhantcoe-jg6cm" target="_blank" class="youtube">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhTarN0gvF-xXr22cghicpKOEYD-1sxdkCAOo0fTuN12NIBxZf2Nd1PeJwadYDlrB57eO-NwIvwI1LVsYcLKeIuMqzFXTks8MhwMsOBjBTxtBzNyuM15GU97CgXWvs_0IpTdNYNVZM5xV54usFhiuj9ngnPiR451Vr5sBMBwMDnV-Vj0o2piC4Bzozf/s1024/pccoe_youtube_social_icon.webp" style="border-radius:10px;" class="img-responsive iconspin" width="30" height="30">
+        </a>
+      </div>
+
+      <br>
+      <br>
+
+      <div class="container">
+        <div class="row justify-content-center"> <!-- Added justify-content-center class -->
+          <div class="col-md-4 news-section">
+            <h4>Updates:</h4>
+            <hr>
+            <div class="news-list">
+              <ul>
+                <li>
+                  <a href="pdf/7,8,feb.pdf" target="_blank">7,8 Feb 23 FDP Impacticying aspects of Academics, Research And Mission-Vision</a>
+                </li>
+                <li>
+                  <a href="pdf/Shivjayanti 2023.pdf" target="_blank">Shivjayanti 2023</a>
+                </li>
+                <li>
+                  <a href="pdf/Parents Meet AY 2022.pdf" target="_blank">Parents Meet AY 2022-23</a>
+                </li>
+                <li>
+                  <a href="" target="_blank">13 April 2023 Guest Lecture on Health & Homoepathy</a>
+                </li>
+                <li>
+                  <a href="pdf/18,19 apr.pdf" target="_blank">18 & 19 April 2023 International Conference</a>
+                </li>
+                <li>
+                  <a href="" target="_blank">17 to 21 April 2023 Days Celebration</a>
+                </li>
+                <li>
+                  <a href="pdf/24,25 apr.pdf" target="_blank">24 And 25 April 2023 Technotsav The Technical Fest</a>
+                </li>
+                <li>
+                  <a href="pdf/26 to 28 April 2023 Indoor And Outdoor Sports.pdf" target="_blank">26 to 28 April 2023 Indoor And Outdoor Sports</a>
+                </li>
+                <li>
+                  <a href="pdf/29 April Spandan 23.pdf" target="_blank">29 April 2023 “Spandan” The Cultural Fest</a>
+                </li>
+              </ul>
+            </div> 
+          </div> 
+        </div> 
+      </div> 
+      
+      <br>
+      <br>
+      <div class="container">
+      <div class="row" style="-webkit-text-size-adjust: 100%;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      font-size: 14px;
+      color: #222;
+      font-weight: 400;
+      font-family: Times New Roman, Times, serif;
+      line-height: 26px;
+      box-sizing: border-box;
+      margin-right: -15px;
+      margin-left: -15px;">
+        <!--<div class="holder col-md-12 col-sm-6">
+<div class="white-box">
+    <div class="">-->
+<div class="col-md-4">
+               <img class="img-responsive" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjmIlb2j0wW38hcrZwL0emZfngRxuYqFzj5Y154jj7-sX0G8fcrIQo7jhVqPO9jzQ6y-wKG3L6Jq2nzI6yfSWQ4aH-T5mXnOBUGTa1yf83ZoYtNZcgGIFZHnVkVlPZ78FTWPXw_7ke_D-YB7sz5a6VztgrACXNzfSy0BlfIKcSlcK9QjTo54cWV5VS2/s408/R%20S%20Yadav.jpg" alt="President Siddhant Group of Institutional" style="width: 100%; border-radius:10px;">
+        &nbsp;
+    <center><h3 style="margin-top:-2%;">Rajendra Singh Yadav</h3><h5><i>(President, Siddhant Group of Institutions) </i></h5></center>
+</div>
+   <div class="col-md-8" style="font-size: 12pt;">
+<p class="text-left"><br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I am very proud to share that our Siddhant College Of Engineering under CAYMET's Siddhant Group Of Institutions is  one of the most eminent educational institution- one that could provide dedication towards overall development of students. Siddhant College Of Engineering started 14 years ago and is renowned for standards of its faculties, students and alumni. Siddhant College of Engineering  hasan excellent infrastructure and well planned campus with all facilities. Siddhant COE is constantly pushing the frontiers of knowledge and ensure the futuristic approach that keeps pace with changing trends of the professional world. With Siddhant COE expertise in interdisciplinary problem solving, the institution has an unique opportunity and to make critical differentiations by creating the innovations and educating as theleaders world needs now.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I wish all faculties a grand success in their efforts to impart excellent education &amp; overall development. Also my best wishes to all students studying in Siddhant COE for their future endeavors.
+
+</p>
+</div>
+</div>
+<br>
+<br>
+<div class="row" style="-webkit-text-size-adjust: 100%;
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+font-size: 14px;
+color: #222;
+font-weight: 400;
+font-family: Times New Roman, Times, serif;
+line-height: 26px;
+box-sizing: border-box;
+margin-right: -15px;
+margin-left: -15px;">
+  <!--<div class="holder col-md-12 col-sm-6">
+<div class="white-box">
+<div class="">-->
+<div class="col-md-4">
+         <img class="img-responsive" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj8A13PsFECzPN-toCP4UGHzuF5gZGswuPrlZX6DDkkupe0UyvsZIXt5L01YlEktTXE8d_i1SyDKJglca0PJ8MjJWqu5-YLIOr7tEDI5KkGhgjGji15e8Jy6mEJ9e_mXrSW-nSaldGK4lUUTnX8yDzpI9wD6xgVmcxFlaENK0RqX-0Jzcq1YAgtJ1DR/s1600/Kambale_Sir.jpeg" alt="President Siddhant Group of Institutional" style="width: 100%; border-radius:10px;">
+  &nbsp;
+<center><h3 style="margin-top:-2%;">Dr. L. V. Kamble</h3><h5><i> (Principal, Siddhant College of Engineering) </i></h5></center>
+</div>
+<div class="col-md-8" style="font-size: 12pt;">
+<p class="text-left"><br><br>
+  My Dear Students and Parents,<br>
+  We at Siddhant CoE are excited to welcome all young students to a fascinating learning center of Innovations and Ideas.
+Siddhant CoE is one of the renowned college of prestigious CAYMET's Siddhant Group Of Institutions, Sudumbare , Pune know for quality education & committed to produce skillful engineers. SCOE is located in industrial belt of MIDC Chakan. Siddhant CoE has excellent infrastrure located in lush green of mother nature.
+Siddhant CoE is successfully accredited with "B Grade" by NAAC, we have now planned for accreditation by NBA as well.
+Institute has faculty members who are well qualified, experienced , inspired & result oriented to inculcate academic excellence by following effective teaching learning process.
+At Siddhant CoE , placement of our student is of prime importance to all of us. Institute focusing on the holistic development of individual students for research, entrepreneurship, skill development , internships at foreign universities. Our association with leading industries as well as MOUs with reputed companies has resulted in a strong liaison with top rated companies of India. Our students get placed in many reputed MNC companies across India & abroad that visit to our college for placement activities
+</p>
+</div>
+</div>
+
+<br>
+<br>
+<footer style="background-color: #6c757d;" style="border-radius:10px;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h3>Contact Us</h3>
+        <p>Siddhant College of Engineering
+          Chakan-Talegaon Road, Near chakan auto hub,
+          Sudumbre, Pune - 412 109</p>
+        <p> Prof. Kedar Bhagwat - 9923906993</p>
+        <p>engineeringprincipal@gmail.com</p>
+      </div>
+      <div class="col-md-6">
+        <h3>Location</h3>
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3777.852148052758!2d73.75442271489631!3d18.760140087269832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b40459c36e13%3A0xab2b1635d0a1deef!2sSiddhant+College+Of+Engineering!5e0!3m2!1sen!2sin!4v1557399135496!5m2!1sen!2sin" width="100%" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</footer>
+
+    <!-- Scripts -->
+    <script>
+      function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.opacity = 0;
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+    setTimeout(function() {
+      moreText.style.opacity = 1;
+    }, 10);
+  }
+}
+
+
+
+</script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
